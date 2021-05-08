@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exam 2</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tic Tac Toe">
+    <meta name="author" content="Rani Patel">
+    <script type = "text/javascript" src = "exam2.js"></script>
+    <link rel="stylesheet" href="exam2.css">
+  </head>
+
+  <body>
+    <h1>Tic-Tac-Toe</h1>
+
+    <table>
+      <tr>
+        <td><button id = "tl" onclick="move(event)"></button></td>
+        <td><button id = "tm" onclick="move(event)"></button></td>
+        <td><button id = "tr" onclick="move(event)"></button></td>
+      </tr>
+      <tr>
+        <td><button id = "ml" onclick="move(event)"></button></td>
+        <td><button id = "mm" onclick="move(event)"></button></td>
+        <td><button id = "mr" onclick="move(event)"></button></td>
+      </tr>
+      <tr>
+        <td><button id = "bl" onclick="move(event)"></button></td>
+        <td><button id = "bm" onclick="move(event)"></button></td>
+        <td><button id = "br" onclick="move(event)"></button></td>
+      </tr>
+    </table>
+    <br>
+    <button id = "replay" onclick="clean()">Replay</button>
+    <br>
+    <h3>Scoreboard</h3>
+    <table>
+      <tr>
+        <th>X</th>
+        <th>O</th>
+      </tr>
+      <tr>
+        <td id="X">0</td>
+        <td id="O">0</td>
+      </tr>
+    </table>
+      
+  </body>
+
+
+</html>

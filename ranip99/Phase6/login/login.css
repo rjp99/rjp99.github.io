@@ -1,0 +1,21 @@
+h3 {
+    font-size: 4vw;
+    margin: 5vw;
+}
+
+button, input[type=submit], input[type=reset], input[type=button]{
+    cursor: pointer;
+}
+
+body{ 
+    background-color: rgb(212, 214, 253);
+    font-family: Raleway;
+    text-align: center;
+    font-size: 2vw;
+}
+  
+input {
+    background-color:  rgb(239, 239, 255);
+    font-size: 2vw;
+}
+

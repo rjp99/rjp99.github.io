@@ -1,0 +1,125 @@
+#nav{ 
+    font-size: clamp(1.1vw, 1.5vw, 1.9vw);
+    padding: 1%;
+    width: 100%;
+    border: .5vw solid rgb(65, 160, 192);
+    background-color: lightblue;
+    table-layout: fixed;
+} 
+ 
+td {
+    border-left: .5vw solid lightskyblue;
+    border-right: .5vw solid lightskyblue;
+}
+
+body {
+    background-color: #E4F7FF;
+    font-family: Raleway;
+    text-align: center;
+    font-size: clamp(1.1vw, 1.5vw, 1.9vw);
+}
+
+.navLogo {
+    width: 8vw;
+}
+
+.flowers {
+    padding: 0;
+    width: 27vw;
+    clear: left;
+}
+
+.us {
+    padding: 5%;
+    width: 12vw;
+    border-radius: 50%;
+}
+
+h1 {
+    color: rgb(65, 160, 192);
+    margin: 0;
+    text-align: center;
+    font-size: 7vw;
+    font-family: Allura;
+    padding: 2%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding-bottom: 5%;
+}
+
+h3 {
+    color: rgb(65, 160, 192);
+    font-size: 5vw;
+    font-family: Allura;
+    margin: 1%;
+}
+
+article {
+    float: left;
+    width: 25%;
+    margin-bottom: 4%;
+}
+
+.bottom {
+    padding: 5%;
+}
+
+a:link, a:visited {
+    color: #301c2d;
+    text-decoration: none;
+  }
+
+a:hover {
+    color: #777777;
+}
+
+a:active {
+    color: #999999;
+}
+
+footer {
+    font-size: 1vw;
+    padding: 1%;
+    background-color: rgb(65, 160, 192);
+    clear: left;
+}
+
+form{
+    width: 65%;
+    margin: auto;
+    background-color: lightskyblue;
+    border: 5px solid rgb(65, 160, 192);
+}
+
+#form {
+    margin: auto;
+    table-layout: fixed;
+}
+
+input, textarea {
+    background-color: #E4F7FF;
+    color: black;
+    width: 25vw;
+    font-size: 1.2vw;
+    border: 1px solid rgb(65, 160, 192);
+}
+
+#form label {
+    border-bottom: .4vw solid #E4F7FF;
+    border-top: .4vw solid #E4F7FF;
+}
+
+#form label, #form input {
+    margin-bottom: 5%;
+    display: block;
+}
+
+.error {
+    color: red;
+    font-size: 1.2vw;
+}
