@@ -1,0 +1,65 @@
+table{ 
+    font-size: 1.8vw;
+    padding: 1%;
+    width: 100%;
+    border: .5vw solid rgb(68, 190, 199);
+    background-color: rgb(165, 243, 248);
+    table-layout: fixed;
+}
+
+body{ 
+    background-color: rgb(197, 249, 253);
+    font-family: Raleway;
+    text-align: center;
+    font-size: 2vw;
+}
+  
+h1 {
+    color: rgb(68, 190, 199);
+    margin: 0;
+    text-align: center;
+    font-size: 8vw;
+    font-family: Allura;
+    padding: 2%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding-bottom: 5%;
+  }
+
+.navLogo {
+    width: 8vw;
+}
+
+.flowers {
+    width: 27vw;
+}
+
+td {
+    border-left: .5vw solid rgb(119, 225, 233);
+    border-right: .5vw solid rgb(119, 225, 233);
+}
+
+a:link, a:visited {
+    color: #301c2d;
+    text-decoration: none;
+  }
+
+a:hover {
+    color: #777777;
+}
+
+a:active {
+    color: #999999;
+}
+
+footer {
+    font-size: 1vw;
+    padding: 1%;
+    background-color: rgb(68, 190, 199);
+    clear: left;
+}

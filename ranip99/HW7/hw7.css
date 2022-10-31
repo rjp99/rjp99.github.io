@@ -1,0 +1,46 @@
+table {
+  table-layout: fixed;
+  margin: auto;
+  text-align: left;
+  border: 2px solid #ff6e40;
+  padding: 2%;
+  line-height: 200%;
+  font-family: monospace;
+}
+body {
+  padding: 2%;
+  border: 50px solid #1e3d59;
+  margin: 3% 10%;
+  text-align: center;
+  background-color: #f5f0e1;
+}
+
+html {
+  background-color: #ff6e40;
+}
+
+ul {
+  width: 50%;
+  display: inline-block;
+  margin: auto;
+  text-align: left;
+}
+
+li {
+  padding: 2%;
+}
+
+h1 {
+  font-family: fantasy;
+  margin: 1%;
+}
+
+input[type=button], input[type=reset] {
+  margin: auto;
+  display: block;
+}
+
+hr {
+  border: 1px solid #1e3d59;
+  width: 50%;
+}

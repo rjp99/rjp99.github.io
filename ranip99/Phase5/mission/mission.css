@@ -1,0 +1,73 @@
+table{ 
+    font-size: clamp(1.1vw, 1.5vw, 1.9vw);
+    padding: 1%;
+    width: 100%;
+    border: .5vw solid rgb(236, 213, 81);
+    background-color: rgb(250, 241, 183);
+    table-layout: fixed;
+} 
+body{ 
+    background-color: rgb(252, 245, 207);
+    font-family: Raleway;
+    text-align: center;
+    font-size: clamp(1.1vw, 1.5vw, 1.9vw);
+}
+  
+h1 {
+    color: rgb(236, 213, 81);
+    margin: 0;
+    text-align: center;
+    font-size: 7vw;
+    font-family: Allura;
+    padding: 2%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding-bottom: 5%;
+  }
+
+.navLogo {
+    width: 8vw;
+}
+
+td {
+    border-left: .5vw solid rgb(248, 232, 0);
+    border-right: .5vw solid rgb(248, 232, 0);
+}
+
+.flowers {
+    width: 27vw;
+}
+
+a:link, a:visited {
+    color: #301c2d;
+    text-decoration: none;
+  }
+
+a:hover {
+    color: #777777;
+}
+
+a:active {
+    color: #999999;
+}
+
+footer {
+    font-size: 1vw;
+    padding: 1%;
+    background-color: rgb(236, 213, 81);
+    clear: left;
+}
+
+.leftf{
+    font-size: 1vw;
+    text-align: left;
+    padding-left: 30%;
+}
+#link{
+    text-decoration: underline;
+}
