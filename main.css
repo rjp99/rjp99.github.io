@@ -8,12 +8,13 @@ body {
 }
 
 html {
-    background: linear-gradient(124deg, #76DEFF, #B8EEFF, #EFCFFF, #FF76D0, #FFCDB8);   
+    background: linear-gradient(124deg, #76DEFF, #B8EEFF, #DFB3FF, #FF76D0, #FFCDB8);   
+    /* background: linear-gradient(124deg, #ffcab9, #fe77d1, #e2aefb, #baeaff, #8ae2ff); */
 }
 
 .card {
     margin: 10px;
-    background: linear-gradient(270deg, #76DEFF, #B8EEFF, #EFCFFF, #FF76D0, #FFCDB8);
+    background: linear-gradient(270deg, #76DEFF, #B8EEFF, #DFB3FF, #FF76D0, #FFCDB8);  
     padding: 5px;
     border: none;
     width: 400px;
@@ -43,8 +44,8 @@ h4 {
 td {
     width: 50% ;
     padding: 2%;
-    border-bottom: 3px double #EFCFFF;
-    border-top: 3px double #EFCFFF;
+    border-bottom: 3px double #DFB3FF;
+    border-top: 3px double #DFB3FF;
 }
 
 table {
