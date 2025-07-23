@@ -24,6 +24,10 @@ html {
     background-color: white;
 }
 
+p {
+    text-align: left;
+}
+
 a {
     color: darkgrey;
     text-decoration: none;
