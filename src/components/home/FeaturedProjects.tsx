@@ -54,7 +54,7 @@ const VideoContainer = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.lg};
   border-radius: ${({ theme }) => theme.borderRadius.lg};
   overflow: hidden;
-  background: ${({ theme }) => theme.colors.gradientStart};
+  background: ${({ theme }) => theme.colors.surface};
   
   video {
     width: 100%;

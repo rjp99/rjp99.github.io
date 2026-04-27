@@ -312,7 +312,7 @@ export default function Contact() {
                 </svg>
               </SocialLink>
               <SocialLink
-                href="https://www.linkedin.com/in/rani-patel-331414200/"
+                href="https://www.linkedin.com/in/rani-j-patel/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}

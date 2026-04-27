@@ -44,7 +44,7 @@ const StyledCard = styled(motion.div)<{ $glow: string }>`
   ${({ $glow, theme }) =>
     $glow === 'pink' &&
     `
-    box-shadow: ${theme.shadows.glowPink};
+    box-shadow: ${theme.shadows.glowStrong};
   `}
 `;
 

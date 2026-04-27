@@ -70,7 +70,7 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
-  background: ${({ theme }) => theme.colors.gradientStart};
+  background: ${({ theme }) => theme.colors.surface};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: ${({ theme }) => theme.borderRadius.md};
   padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.lg};
@@ -82,7 +82,7 @@ const Input = styled.input`
   &:focus {
     outline: none;
     border-color: ${({ theme }) => theme.colors.primary};
-    box-shadow: 0 0 0 3px ${({ theme }) => theme.colors.glowPurple};
+    box-shadow: 0 0 0 3px ${({ theme }) => theme.colors.glowPrimary};
   }
   
   &::placeholder {
@@ -92,7 +92,7 @@ const Input = styled.input`
 `;
 
 const TextArea = styled.textarea`
-  background: ${({ theme }) => theme.colors.gradientStart};
+  background: ${({ theme }) => theme.colors.surface};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: ${({ theme }) => theme.borderRadius.md};
   padding: ${({ theme }) => theme.spacing.md} ${({ theme }) => theme.spacing.lg};
@@ -106,7 +106,7 @@ const TextArea = styled.textarea`
   &:focus {
     outline: none;
     border-color: ${({ theme }) => theme.colors.primary};
-    box-shadow: 0 0 0 3px ${({ theme }) => theme.colors.glowPurple};
+    box-shadow: 0 0 0 3px ${({ theme }) => theme.colors.glowPrimary};
   }
   
   &::placeholder {
@@ -319,7 +319,7 @@ export default function ContactContent() {
                 </svg>
               </SocialLink>
               <SocialLink
-                href="https://www.linkedin.com/in/rani-patel-331414200/"
+                href="https://www.linkedin.com/in/rani-j-patel/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}

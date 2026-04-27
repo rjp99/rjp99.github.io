@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <main>
+      <main id="main-content" role="main">
         <Hero />
         <About />
         <Experience />

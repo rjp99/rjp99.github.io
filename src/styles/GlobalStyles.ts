@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
   *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -13,35 +11,54 @@ export const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
   body {
     font-family: ${({ theme }) => theme.fonts.body};
     font-size: ${({ theme }) => theme.fontSizes.base};
     color: ${({ theme }) => theme.colors.text};
-    background: linear-gradient(
-      124deg,
-      ${({ theme }) => theme.colors.accent} 0%,
-      ${({ theme }) => theme.colors.skyBlue} 20%,
-      ${({ theme }) => theme.colors.lavender} 40%,
-      ${({ theme }) => theme.colors.secondary} 70%,
-      ${({ theme }) => theme.colors.highlight} 100%
-    );
-    background-attachment: fixed;
+    background: ${({ theme }) => theme.colors.background};
     min-height: 100vh;
-    line-height: 1.6;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: ${({ theme }) => theme.fonts.heading};
-    font-weight: 700;
-    line-height: 1.2;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    line-height: 1.8;
   }
 
   a {
     color: inherit;
     text-decoration: none;
-    transition: color ${({ theme }) => theme.transitions.fast};
+    transition: color 0.2s ease;
+  }
+
+  /* Accessible focus states */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid ${({ theme }) => theme.colors.primary};
+    outline-offset: 2px;
   }
 
   button {
@@ -63,20 +80,38 @@ export const GlobalStyles = createGlobalStyle`
 
   ::selection {
     background: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.background};
+  }
+
+  /* Skip link for accessibility */
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.background};
+    padding: 0.75rem 1.5rem;
+    border-radius: ${({ theme }) => theme.borderRadius.md};
+    font-weight: 600;
+    z-index: 9999;
+    
+    &:focus {
+      top: 1rem;
+    }
   }
 
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
+    background: ${({ theme }) => theme.colors.surface};
   }
 
   ::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => theme.colors.primary};
+    background: ${({ theme }) => theme.colors.muted};
     border-radius: ${({ theme }) => theme.borderRadius.full};
   }
 

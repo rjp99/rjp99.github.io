@@ -62,8 +62,8 @@ const ImageGlow = styled.div`
   height: 100%;
   background: linear-gradient(
     135deg,
-    ${({ theme }) => theme.colors.glowPurple},
-    ${({ theme }) => theme.colors.glowPink}
+    ${({ theme }) => theme.colors.glowPrimary},
+    ${({ theme }) => theme.colors.glowSecondary}
   );
   filter: blur(60px);
   opacity: 0.5;

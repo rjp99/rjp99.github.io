@@ -36,43 +36,45 @@ const sizeStyles = {
 
 const variantStyles = {
   primary: css`
-    background: linear-gradient(135deg, ${({ theme }) => theme.colors.accent}, ${({ theme }) => theme.colors.secondary});
-    color: #1A1A24;
-    box-shadow: 0 4px 20px rgba(118, 222, 255, 0.4);
+    background: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.background};
     font-weight: 600;
     
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 30px rgba(118, 222, 255, 0.5);
+    &:hover:not(:disabled) {
+      background: ${({ theme }) => theme.colors.accent};
+      transform: translateY(-1px);
+    }
+    
+    &:active:not(:disabled) {
+      transform: translateY(0);
     }
   `,
   secondary: css`
-    background: ${({ theme }) => theme.colors.cardDark};
+    background: ${({ theme }) => theme.colors.surface};
     color: ${({ theme }) => theme.colors.text};
     border: 1px solid ${({ theme }) => theme.colors.cardBorder};
     
-    &:hover {
-      background: ${({ theme }) => theme.colors.accent};
-      border-color: ${({ theme }) => theme.colors.accent};
-      color: #1A1A24;
+    &:hover:not(:disabled) {
+      background: ${({ theme }) => theme.colors.surfaceHover};
+      border-color: ${({ theme }) => theme.colors.cardBorderHover};
     }
   `,
   outline: css`
     background: transparent;
     color: ${({ theme }) => theme.colors.primary};
-    border: 2px solid ${({ theme }) => theme.colors.primary};
+    border: 1px solid ${({ theme }) => theme.colors.primary};
     
-    &:hover {
-      background: ${({ theme }) => theme.colors.primary};
-      color: #FFFFFF;
+    &:hover:not(:disabled) {
+      background: rgba(232, 180, 188, 0.1);
     }
   `,
   ghost: css`
     background: transparent;
-    color: ${({ theme }) => theme.colors.text};
+    color: ${({ theme }) => theme.colors.textMuted};
     
-    &:hover {
-      color: ${({ theme }) => theme.colors.primary};
+    &:hover:not(:disabled) {
+      color: ${({ theme }) => theme.colors.text};
+      background: ${({ theme }) => theme.colors.surface};
     }
   `,
 };
@@ -86,17 +88,22 @@ const baseButtonStyles = css<{
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-family: ${({ theme }) => theme.fonts.heading};
-  font-weight: 600;
-  border-radius: ${({ theme }) => theme.borderRadius.full};
+  font-family: ${({ theme }) => theme.fonts.body};
+  font-weight: 500;
+  border-radius: ${({ theme }) => theme.borderRadius.md};
   cursor: pointer;
-  transition: all ${({ theme }) => theme.transitions.normal};
+  transition: all ${({ theme }) => theme.transitions.fast};
   text-decoration: none;
   border: none;
   width: ${({ $fullWidth }) => ($fullWidth ? '100%' : 'auto')};
   
   ${({ $size }) => sizeStyles[$size]}
   ${({ $variant }) => variantStyles[$variant]}
+  
+  &:focus-visible {
+    outline: 2px solid ${({ theme }) => theme.colors.primary};
+    outline-offset: 2px;
+  }
   
   &:disabled {
     opacity: 0.5;

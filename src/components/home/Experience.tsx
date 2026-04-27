@@ -37,8 +37,8 @@ const Timeline = styled.div`
     background: linear-gradient(
       to bottom,
       ${({ theme }) => theme.colors.primary},
-      ${({ theme }) => theme.colors.lavender},
-      ${({ theme }) => theme.colors.secondary}
+      ${({ theme }) => theme.colors.accent},
+      ${({ theme }) => theme.colors.muted}
     );
     
     @media (max-width: ${({ theme }) => theme.breakpoints.md}) {

@@ -39,7 +39,7 @@ const EducationCard = styled(motion.div)`
   
   &:hover {
     border-color: ${({ theme }) => theme.colors.accent};
-    box-shadow: 0 0 30px ${({ theme }) => theme.colors.glowPurple};
+    box-shadow: 0 0 30px ${({ theme }) => theme.colors.glowPrimary};
   }
 `;
 
@@ -48,14 +48,25 @@ const CardHeader = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: ${({ theme }) => theme.spacing.md};
-  flex-wrap: wrap;
+  gap: ${({ theme }) => theme.spacing.lg};
+`;
+
+const HeaderContent = styled.div`
+  flex: 1;
+  min-width: 0;
+`;
+
+const BadgeGroup = styled.div`
+  display: flex;
   gap: ${({ theme }) => theme.spacing.sm};
+  align-items: center;
+  flex-shrink: 0;
 `;
 
 const Degree = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.xl};
   color: ${({ theme }) => theme.colors.text};
-  margin: 0;
+  margin: 0 0 ${({ theme }) => theme.spacing.xs} 0;
 `;
 
 const DateBadge = styled.span`
@@ -152,14 +163,14 @@ export default function Education() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <CardHeader>
-              <div>
+              <HeaderContent>
                 <Degree>{edu.degree}</Degree>
                 <Institution>{edu.institution}</Institution>
-              </div>
-              <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+              </HeaderContent>
+              <BadgeGroup>
                 {edu.current && <CurrentBadge>In Progress</CurrentBadge>}
                 <DateBadge>{edu.year}</DateBadge>
-              </div>
+              </BadgeGroup>
             </CardHeader>
             <Details>
               {edu.details}
